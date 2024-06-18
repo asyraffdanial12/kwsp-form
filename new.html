@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KWSP Form</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+  <script src="https://unpkg.com/signature_pad"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../../image/logo.png" alt="Logo">
+    </div>
+  </header>
+  <div class="card" id="makepdf">
+    <form action="form.php" method="post">
+      <div class="container">
+        <div class="square" id="square1">
+          <table width="750" style="font-size: 10px">
+            <tbody>
+              <tr>
+                <td colspan="4" style="font-size: 12px">
+                  <div class="box">
+                    <div>
+                      <p><b>SENARAI SEMAK JURUTERA MESINIAGA BAGI <input type="radio" name="device" value="PC" required>
+                          PC
+                          / <input type="radio" name="device" value="Notebook" required> Notebook</b></p>
+                      <p><b>STIKER -Notebook : Tampal pada bahagian BAWAH Notebook / PC : Tampal pada TEPI CPU</b></p>
+                      <p><b>Pastikan maklumat pc/nb ditulis dengan lengkap dan jelas pada stiker</b></p>
+                    </div>
+                    <div class="kwspLogo">
+                      <img src="../../image/Logo_KWSP.jpg">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" align="left" style="padding-left: 1px;"><label for="jabatan"><b
+                      class="spaced-text">Jabatan
+                      / Spoke : </b></label><input name="jabatan" type="text" required id="jabatan" size="50"
+                    style="border: none;"></td>
+                <td width="218" style="text-align: left"><label for="noTalianPengguna"><b class="spaced-text">No Talian
+                      Pengguna: </b></label><input name="noTalianPengguna" type="text" required id="noTalianPengguna"
+                    size="10" style="border: none;"></td>
+              </tr>
+              <tr>
+                <td colspan="3" align="left" style="padding-left: 1px;"><label for="namaPengguna"><b
+                      class="spaced-text">Nama Pengguna : </b></label><input name="namaPengguna" type="text" required
+                    id="namaPengguna" size="50" style="border: none;"></td>
+                <td align="left" style="padding-left: 1px;"><label for="TarikhMula"><b class="spaced-text">Tarikh Mula:
+                    </b></label><input type="date" id="TarikhMula" name="TarikhMula" style="border: none;" required
+                    style="border: none;"></td>
+              </tr>
+              <tr>
+                <td colspan="3" align="left" style="padding-left: 1px;"><label for="noAnggota"><b
+                      class="spaced-text">No.
+                      Anggota : </b></label><input name="noAnggota" type="text" required id="noAnggota" size="50"
+                    style="border: none;"></td>
+                <td align="left" style="padding-left: 1px;"><label for="waktuMula"><b class="spaced-text">Waktu Mula:
+                    </b></label><input type="time" id="waktuMula" name="waktuMula" required style="border: none;"></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="left" style="padding-left: 1px;"><label for="newHostName"><b
+                      class="spaced-text">New
+                      Host Name/ PC Name : </b></label><input name="newHostName" type="text" required id="newHostName"
+                    size="20" style="border: none;"></td>
+                <td width="178" align="left" style="padding-left: 1px;"><label for="model"><b class="spaced-text">Model:
+                    </b></label><input type="text" id="model" name="model" size="10" required style="border: none;">
+                <td style="text-align: left"><label for="serialNo"><b class="spaced-text">Serial Number:
+                    </b></label><input name="serialNo" type="text" required id="serialNo" size="12"
+                    style="border: none;"></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="left" style="padding-left: 1px;"><label for="oldHostName"><b
+                      class="spaced-text">Old
+                      Host Name/ PC Name : </b></label><input name="oldHostName" type="text" required id="oldHostName"
+                    size="20" style="border: none;"></td>
+                <td align="left" style="padding-left: 1px;"><label for="oldIP"><b class="spaced-text">Old IP:
+                    </b></label><input type="text" id="oldIP" name="oldIP" size="10" style="border: none;"></td>
+                <td align="left" style="padding-left: 1px;"><label for="oldMAC"><b class="spaced-text">Old MAC:
+                    </b></label><input type="text" id="oldMAC" name="oldMAC" size="10" style="border: none;"></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="left" style="padding-left: 1px;"><label><b class="spaced-text">No Inventori KWSP
+                      :
+                      (New)</b></label><input name="newInv" type="text" id="newInv" size="7" style="border: none;">
+                  <lable><b class="spaced-text">(Old)</b></lable><input name="oldInv" type="text" id="oldInv" size="6"
+                    style="border: none;">
+                </td>
+                <td align="left" style="padding-left: 1px;"><label for="newIP"><b class="spaced-text">New IP:
+                    </b></label><input type="text" id="newIP" name="newIP" size="10" style="border: none;"></td>
+                <td align="left" style="padding-left: 1px;"><label for="newMAC"><b class="spaced-text">New MAC:
+                    </b></label><input type="text" id="newMAC" name="newMAC" size="15" style="border: none;"></td>
+              </tr>
+              <tr>
+                <td colspan="4" bgcolor="#DCD7C4" style="text-align: left"><b class="spaced-text">Pengesahan Penerimaan
+                    Peralatan Pengguna</b></td>
+              </tr>
+              <tr>
+                <td colspan="4" align="left" style="padding-left: 1px;">
+
+                  <div class="checkbox-container">
+
+                    <label><b>NOTEBOOK :</b></label>
+
+                    <input type="checkbox" id="notebook" name="notebook" value="checked">
+                    <label for="notebook">Notebook</label>
+
+                    <input type="checkbox" id="carry_case" name="carry_case" value="checked">
+                    <label for="carry_case">Carry case(Bag 1)</label>
+
+                    <input type="checkbox" id="lenovo_bag" name="lenovo_bag" value="checked">
+                    <label for="lenovo_bag">Lenovo Bag Pack(Bag 2)</label>
+
+                    <input type="checkbox" id="mouse" name="mouse" value="checked">
+                    <label for="mouse">Mouse</label>
+
+                    <input type="checkbox" id="power_adapter" name="power_adapter" value="checked">
+                    <label for="power_adapter">Power Adapter</label>
+
+                    <input type="checkbox" id="lock" name="lock" value="checked">
+                    <label for="lock">Lock (Kunci)</label>
+
+                    <input type="checkbox" id="network_dongle" name="network_dongle" value="checked">
+                    <label for="network_dongle">Network Dongle</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4" align="left" style="padding-left: 1px;">
+                  <div class="checkbox-container">
+                    <label for="desktop"><b>DESKTOP PC:</b></label>
+                    <input type="checkbox" id="cpu" name="cpu" value="checked">
+                    <label for="cpu">CPU</label>
+
+                    <input type="checkbox" id="monitor" name="monitor" value="checked">
+                    <label for="monitor">Monitor</label>
+
+                    <input type="checkbox" id="keyboard" name="keyboard" value="checked">
+                    <label for="keyboard">Keyboard</label>
+
+                    <input type="checkbox" id="mouse" name="mouse" value="checked">
+                    <label for="mouse">Mouse</label>
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4" bgcolor="#DCD7C4" style="text-align: left"><b class="spaced-text">BAHAGIAN A- Jurutera
+                    dikehendaki memenuhi ruangan ini(pastikan pengguna membuat ujian yang disenaraikan sebelum menanda
+                    senarai semak)</b></td>
+              </tr>
+
+              <tr>
+                <td width="23" bgcolor="#DCD7C4" style="text-align: center"><b>No.</b></td>
+                <td width="307" bgcolor="#DCD7C4" style="text-align: center"><b>Aktiviti</b></td>
+                <td bgcolor="#DCD7C4" style="text-align: center"><b>Status</b></td>
+                <td bgcolor="#DCD7C4" style="text-align: center"><b>Remarks</b></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">1</td>
+                <td style="text-align: left; padding-left: 10px;">Check PC/Notebook Bios. If promt message "Checking
+                  Media
+                  Presence".</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes1" name="status1" value="Yes"
+                        onclick="handleCheckboxClick('status1', 'statusYes1')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo1" name="status1" value="No"
+                        onclick="handleCheckboxClick('status1', 'statusNo1')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA1" name="status1" value="N/A"
+                        onclick="handleCheckboxClick('status1', 'statusNA1')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px;">Please refer Guideline How to fix issue Checking Media
+                  Presence.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">2</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Make sure Hard Disk partition has
+                  been created into two
+                  partitions which is C: (60%) & D: (40%).</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes2" name="status2" value="Yes"
+                        onclick="handleCheckboxClick('status2', 'statusYes2')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo2" name="status2" value="No"
+                        onclick="handleCheckboxClick('status2', 'statusNo2')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA2" name="status2" value="N/A"
+                        onclick="handleCheckboxClick('status2', 'statusNA2')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px;">NB: C: (300GB) & D: (200GB).</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">3</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Change the computer name to the
+                  new
+                  Hostname.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes3" name="status3" value="Yes"
+                        onclick="handleCheckboxClick('status3', 'statusYes3')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo3" name="status3" value="No"
+                        onclick="handleCheckboxClick('status3', 'statusNo3')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA3" name="status3" value="N/A"
+                        onclick="handleCheckboxClick('status3', 'statusNA3')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">4</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Check PC/Notebook get the
+                  internal
+                  network.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes4" name="status4" value="Yes"
+                        onclick="handleCheckboxClick('status4', 'statusYes4')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo4" name="status4" value="No"
+                        onclick="handleCheckboxClick('status4', 'statusNo4')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA4" name="status4" value="N/A"
+                        onclick="handleCheckboxClick('status4', 'statusNA4')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">For HQ Kwasa, share MAC address
+                  to
+                  DTD for bypass.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">5</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Join Domain "kwsp.local".</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes5" name="status5" value="Yes"
+                        onclick="handleCheckboxClick('status5', 'statusYes5')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo5" name="status5" value="No"
+                        onclick="handleCheckboxClick('status5', 'statusNo5')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA5" name="status5" value="N/A"
+                        onclick="handleCheckboxClick('status5', 'statusNA5')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">After join please inform EPF
+                  Internal
+                  IT to push Domain
+                  Group Policy.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">6</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Verify windows 10 Pro Version is
+                  21H1
+                  (OS Build 19043) and license is activated.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes6" name="status6" value="Yes"
+                        onclick="handleCheckboxClick('status6', 'statusYes6')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo6" name="status6" value="No"
+                        onclick="handleCheckboxClick('status6', 'statusNo6')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA6" name="status6" value="N/A"
+                        onclick="handleCheckboxClick('status6', 'statusNA6')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">Windows license automatically
+                  activated after join domain.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">7</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Run Win10 22H2 patches and verify
+                  the
+                  OS version change to Win10 22H2.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes7" name="status7" value="Yes"
+                        onclick="handleCheckboxClick('status7', 'statusYes7')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo7" name="status7" value="No"
+                        onclick="handleCheckboxClick('status7', 'statusNo7')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA7" name="status7" value="N/A"
+                        onclick="handleCheckboxClick('status7', 'statusNA7')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center ; font-weight: bold;">8</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Install System Centre
+                  Configuration
+                  Manager Client (SCCM).</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes8" name="status8" value="Yes"
+                        onclick="handleCheckboxClick('status8', 'statusYes8')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo8" name="status8" value="No"
+                        onclick="handleCheckboxClick('status8', 'statusNo8')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA8" name="status8" value="N/A"
+                        onclick="handleCheckboxClick('status8', 'statusNA8')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">Please Refer Guideline.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">9</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Install Symantec Endpoint
+                  Encryption
+                  (SEE), only for notebook.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes9" name="status9" value="Yes"
+                        onclick="handleCheckboxClick('status9', 'statusYes9')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo9" name="status9" value="No"
+                        onclick="handleCheckboxClick('status9', 'statusNo9')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA9" name="status9" value="N/A"
+                        onclick="handleCheckboxClick('status9', 'statusNA9')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">Please Refer Guideline.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">10</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Install Symantec Endpoint
+                  Protection
+                  (SEP).</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes10" name="status10" value="Yes"
+                        onclick="handleCheckboxClick('status10', 'statusYes10')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo10" name="status10" value="No"
+                        onclick="handleCheckboxClick('status10', 'statusNo10')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA10" name="status10" value="N/A"
+                        onclick="handleCheckboxClick('status10', 'statusNA10')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">Please Refer Guideline.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">11</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Install DLP *advisable to do on
+                  last
+                  step.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes11" name="status11" value="Yes"
+                        onclick="handleCheckboxClick('status11','statusYes11')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo11" name="status11" value="No"
+                        onclick="handleCheckboxClick('status11', 'statusNo11')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA11" name="status11" value="N/A"
+                        onclick="handleCheckboxClick('status11', 'statusNA11')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">Please Refer Guideline.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">12</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Install and Configure Pulse
+                  Secure
+                  VPN.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes12" name="status12" value="Yes"
+                        onclick="handleCheckboxClick('status12', 'statusYes12')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo12" name="status12" value="No"
+                        onclick="handleCheckboxClick('status12', 'statusNo12')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA12" name="status12" value="N/A"
+                        onclick="handleCheckboxClick('status12', 'statusNA12')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">Please Refer Guideline.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">13</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Disable the Juniper Network
+                  Service.
+                </td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes13" name="status13" value="Yes"
+                        onclick="handleCheckboxClick('status13', 'statusYes13')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo13" name="status13" value="No"
+                        onclick="handleCheckboxClick('status13', 'statusNo13')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA13" name="status13" value="N/A"
+                        onclick="handleCheckboxClick('status13', 'statusNA13')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">14</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Install Zoom.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes14" name="status14" value="Yes"
+                        onclick="handleCheckboxClick('status14', 'statusYes14')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo14" name="status14" value="No"
+                        onclick="handleCheckboxClick('status14', 'statusNo14')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA14" name="status14" value="N/A"
+                        onclick="handleCheckboxClick('status14', 'statusNA14')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">15</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Install GINA, re-install NetIQ
+                  and
+                  re-install Fire Eye with latest version.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes15" name="status15" value="Yes"
+                        onclick="handleCheckboxClick('status15', 'statusYes15')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo15" name="status15" value="No"
+                        onclick="handleCheckboxClick('status15', 'statusNo15')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA15" name="status15" value="N/A"
+                        onclick="handleCheckboxClick('status15', 'statusNA15')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">Please Refer Guideline.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">16</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Install NAC.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes16" name="status16" value="Yes"
+                        onclick="handleCheckboxClick('status16', 'statusYes16')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo16" name="status16" value="No"
+                        onclick="handleCheckboxClick('status16', 'statusNo16')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA16" name="status16" value="N/A"
+                        onclick="handleCheckboxClick('status16', 'statusNA16')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">Please Refer Guideline.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">17</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Install MS Teams.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes17" name="status17" value="Yes"
+                        onclick="handleCheckboxClick('status17', 'statusYes17')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo17" name="status17" value="No"
+                        onclick="handleCheckboxClick('status17', 'statusNo17')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA17" name="status17" value="N/A"
+                        onclick="handleCheckboxClick('status17', 'statusNA17')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">18</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Configure Flexshare.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes18" name="status18" value="Yes"
+                        onclick="handleCheckboxClick('status18', 'statusYes18')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo18" name="status18" value="No"
+                        onclick="handleCheckboxClick('status18', 'statusNo18')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA18" name="status18" value="N/A"
+                        onclick="handleCheckboxClick('status18', 'statusNA18')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">19</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">(Old PC/Notebook) Make sure user
+                  already backup their data follow the EPF DTD (panduan backup Data dan Email
+                  Archive).</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes19" name="status19" value="Yes"
+                        onclick="handleCheckboxClick('status19', 'statusYes19')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo19" name="status19" value="No"
+                        onclick="handleCheckboxClick('status19', 'statusNo19')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA19" name="status19" value="N/A"
+                        onclick="handleCheckboxClick('status19', 'statusNA19')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 10px;">If the backup size is more than
+                  50GB
+                  or all the backup is not done please escalate to EPF DTD.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">20</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Please check the non standard
+                  software installed in old pc/nb.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes20" name="status20" value="Yes"
+                        onclick="handleCheckboxClick('status20', 'statusYes20')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo20" name="status20" value="No"
+                        onclick="handleCheckboxClick('status20', 'statusNo20')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA20" name="status20" value="N/A"
+                        onclick="handleCheckboxClick('status20', 'statusNA20')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">copy all the non standard.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">21</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Ask User to login to create User
+                  Profile.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes21" name="status21" value="Yes"
+                        onclick="handleCheckboxClick('status21', 'statusYes21')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo21" name="status21" value="No"
+                        onclick="handleCheckboxClick('status21', 'statusNo21')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA21" name="status21" value="N/A"
+                        onclick="handleCheckboxClick('status21', 'statusNA21')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">22</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Transfer all the folders backup
+                  (including email archive) into the new PC/Notebook.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes22" name="status22" value="Yes"
+                        onclick="handleCheckboxClick('status22', 'statusYes22')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo22" name="status22" value="No"
+                        onclick="handleCheckboxClick('status22', 'statusNo22')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA22" name="status22" value="N/A"
+                        onclick="handleCheckboxClick('status22', 'statusNA22')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">23</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Upgrade the Microsoft Office 2016
+                  STD
+                  to Microsoft Office 2016 Pro (If the User grades G24/E1 and above).</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes23" name="status23" value="Yes"
+                        onclick="handleCheckboxClick('status23', 'statusYes23')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo23" name="status23" value="No"
+                        onclick="handleCheckboxClick('status23', 'statusNo23')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA23" name="status23" value="N/A"
+                        onclick="handleCheckboxClick('status23', 'statusNA23')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px;">If the user grades below G24 please remain with
+                  Microsoft
+                  Office 2016 STD.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">24</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Unpin all icons in Start Menu
+                  Tiles.
+                </td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes24" name="status24" value="Yes"
+                        onclick="handleCheckboxClick('status24', 'statusYes24')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo24" name="status24" value="No"
+                        onclick="handleCheckboxClick('status24', 'statusNo24')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA24" name="status24" value="N/A"
+                        onclick="handleCheckboxClick('status24', 'statusNA24')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">25</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Ensure Microsoft Edge icon on
+                  Desktop
+                  and Taskbar and set as default browser.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes25" name="status25" value="Yes"
+                        onclick="handleCheckboxClick('status25', 'statusYes25')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo25" name="status25" value="No"
+                        onclick="handleCheckboxClick('status25', 'statusNo25')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA25" name="status25" value="N/A"
+                        onclick="handleCheckboxClick('status25', 'statusNA25')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">Microsoft Edge is now default
+                  browser.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">26</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Place IT Service Portal shortcut
+                  in
+                  Public Desktop.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes26" name="status26" value="Yes"
+                        onclick="handleCheckboxClick('status26', 'statusYes26')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo26" name="status26" value="No"
+                        onclick="handleCheckboxClick('status26', 'statusNo26')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA26" name="status26" value="N/A"
+                        onclick="handleCheckboxClick('status26', 'statusNA26')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">27</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Run HanTrust #KWSP4ever.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes27" name="status27" value="Yes"
+                        onclick="handleCheckboxClick('status27', 'statusYes27')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo27" name="status27" value="No"
+                        onclick="handleCheckboxClick('status27', 'statusNo27')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA27" name="status27" value="N/A"
+                        onclick="handleCheckboxClick('status27', 'statusNA27')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">28</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Set default pdf file using adobe
+                  reader.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes28" name="status28" value="Yes"
+                        onclick="handleCheckboxClick('status28', 'statusYes28')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo28" name="status28" value="No"
+                        onclick="handleCheckboxClick('status28', 'statusNo28')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA28" name="status28" value="N/A"
+                        onclick="handleCheckboxClick('status28', 'statusNA28')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="square" id="square2">
+          <table width="750" height="700" style="font-size: 10px">
+            <tbody>
+              <tr>
+                <td width="23" bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">29</td>
+                <td width="317" style="text-align: left; padding-left: 10px;">Disable/uninstall games & unwanted
+                  programs.
+                </td>
+                <td width="185">
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes29" name="status29" value="Yes"
+                        onclick="handleCheckboxClick('status29', 'statusYes29')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo29" name="status29" value="No"
+                        onclick="handleCheckboxClick('status29', 'statusNo29')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA29" name="status29" value="N/A"
+                        onclick="handleCheckboxClick('status29', 'statusNA29')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">Example: Game Bar, Xbox,
+                  Microsoft
+                  Solitaire Collection, Lenovo Vantage.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">30</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Please check computer Management
+                  -
+                  Local Users and Groups for; <br><br>i) Users - local id <br>ii) Groups - ConfigMgr
+                  Remote Control Users.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes30" name="status30" value="Yes"
+                        onclick="handleCheckboxClick('status30', 'statusYes30')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo30" name="status30" value="No"
+                        onclick="handleCheckboxClick('status30', 'statusNo30')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA30" name="status30" value="N/A"
+                        onclick="handleCheckboxClick('status30', 'statusNA30')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;"><b>i. Remove ID "Mesiniaga" &
+                    others
+                    ID</b><br>
+                  <i>-only epfadm, kwsp, DefaultAccount, <br> epfguest, WDAGUtilityAccount are allowed in "Users"
+                  </i><br><br><b>ii. Remove other
+                    ID/Group</b><br>
+                  <i>-Ensure only Desktop_SCCM_Admin in the Group.</i>
+                </td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">31</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Copy BDS Icon into Public Desktop
+                  folder (different link for each spoke).</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes31" name="status31" value="Yes"
+                        onclick="handleCheckboxClick('status31', 'statusYes31')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo31" name="status31" value="No"
+                        onclick="handleCheckboxClick('status31', 'statusNo31')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA31" name="status31" value="N/A"
+                        onclick="handleCheckboxClick('status31', 'statusNA31')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">Please refer PIC for the correct
+                  BDS
+                  icon.</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">32</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Compatability View - Turn Off.
+                </td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes32" name="status32" value="Yes"
+                        onclick="handleCheckboxClick('status32', 'statusYes32')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo32" name="status32" value="No"
+                        onclick="handleCheckboxClick('status32', 'statusNo32')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA32" name="status32" value="N/A"
+                        onclick="handleCheckboxClick('status32', 'statusNA32')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">33</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Setup Printer.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes33" name="status33" value="Yes"
+                        onclick="handleCheckboxClick('status33', 'statusYes33')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo33" name="status33" value="No"
+                        onclick="handleCheckboxClick('status33', 'statusNo33')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA33" name="status33" value="N/A"
+                        onclick="handleCheckboxClick('status33', 'statusNA33')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">Setting paper to A4 (Pls refer
+                  existing old PC).</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">34</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Setup Scanner.</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes34" name="status34" value="Yes"
+                        onclick="handleCheckboxClick('status34', 'statusYes34')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo34" name="status34" value="No"
+                        onclick="handleCheckboxClick('status34', 'statusNo34')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA34" name="status34" value="N/A"
+                        onclick="handleCheckboxClick('status34', 'statusNA34')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">35</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Setup Thumbprint Scanner (Counter
+                  only).</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes35" name="status35" value="Yes"
+                        onclick="handleCheckboxClick('status35', 'statusYes35')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo35" name="status35" value="No"
+                        onclick="handleCheckboxClick('status35', 'statusNo35')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA35" name="status35" value="N/A"
+                        onclick="handleCheckboxClick('status35', 'statusNA35')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center ; font-weight: bold;">36</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Setup Bar Code Machine, (Only for
+                  Backend counter).</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes36" name="status36" value="Yes"
+                        onclick="handleCheckboxClick('status36', 'statusYes36')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo36" name="status36" value="No"
+                        onclick="handleCheckboxClick('status36', 'statusNo36')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA36" name="status36" value="N/A"
+                        onclick="handleCheckboxClick('status36', 'statusNA36')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">37</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Setup Quebee, (Only for Counter).
+                </td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes37" name="status37" value="Yes"
+                        onclick="handleCheckboxClick('status37', 'statusYes37')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo37" name="status37" value="No"
+                        onclick="handleCheckboxClick('status37', 'statusNo37')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA37" name="status37" value="N/A"
+                        onclick="handleCheckboxClick('status37', 'statusNA37')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">38</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Ensure NO folder is shared at
+                  both
+                  machines (OLD & NEW).</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes38" name="status38" value="Yes"
+                        onclick="handleCheckboxClick('status38', 'statusYes38')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo38" name="status38" value="No"
+                        onclick="handleCheckboxClick('status38', 'statusNo38')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA38" name="status38" value="N/A"
+                        onclick="handleCheckboxClick('status38', 'statusNA38')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 20px;">Please remove by using "Stop
+                  Sharing".</td>
+              </tr>
+
+              <tr>
+                <td bgcolor="#FFFFFF" style="text-align: center; font-weight: bold;">39</td>
+                <td style="text-align: left; padding-left: 10px; padding-right: 10px;">Ensure remove permission ID
+                  "Mesiniaga" on shared folder at both macbines (OLD & NEW).</td>
+                <td>
+                  <div class="checkbox-row">
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusYes39" name="status39" value="Yes"
+                        onclick="handleCheckboxClick('status39', 'statusYes39')">
+                      <label for="checkbox-yes">Yes</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNo39" name="status39" value="No"
+                        onclick="handleCheckboxClick('status39', 'statusNo39')">
+                      <label for="checkbox-no">No</label>
+                    </div>
+                    <div class="checkbox-container1">
+                      <input type="checkbox" id="statusNA39" name="status39" value="N/A"
+                        onclick="handleCheckboxClick('status39', 'statusNA39')">
+                      <label for="checkbox-na">N/A</label>
+                    </div>
+                  </div>
+                </td>
+                <td style="text-align: left; padding-left: 20px; padding-right: 10px;">Remove by right click on folder >
+                  Properties > Security > Edit > Remove ID "Mesiniaga" > Apply.</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" bgcolor="#DCD7C4" style="text-align: left"><b class="spaced-text">AKUAN JURUTERA</b>
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="4" style="text-align: left; padding-left: 10px; padding-right: 10px;">Saya dengan ini
+                  mengesahkan konfigurasi telah dilakukan mengikut senarai semakan di atas dan PC/Notebook adalah
+                  beroperasi
+                  dengan baik.</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" style="text-align: left"><b class="spaced-text">Nama Jurutera :</b><input
+                    name="namaJurutera" type="text" required id="namaJurutera" size="50" style="border: none;">
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="4" style="text-align: left"><b class="spaced-text">Waktu Tamat :</b><input type="time"
+                    id="WaktuTamat" name="WaktuTamat" required style="border: none;"></td>
+              </tr>
+
+              <tr>
+                <td colspan="4" style="text-align: left; border: none;"><b class="spaced-text">Tandatangan :</b>
+                  <!-- Create a canvas for drawing -->
+                  <br>
+                  <br>
+                  <canvas class="spaced-text" id="signatureCanvas" style="border: 1px solid #ccc;"></canvas>
+                  <br>
+
+                  <!-- Hidden input to store the signature data -->
+                  <input type="hidden" id="signature" name="signature">
+
+                  <!-- Add a button to clear the signature -->
+                  <button id="button" class="spaced-text" type="button" onclick="clearSignature()">Clear
+                    Signature</button>
+
+
+
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </form>
+    <!-- Button to trigger PDF generation -->
+    <button id="printButton">Print to PDF</button>
+  </div>
+
+  <!-- Include your JavaScript file -->
+  <script src="../../script/script.js"></script>
+</body>
+
+</html>
